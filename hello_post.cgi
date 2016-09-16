@@ -43,11 +43,13 @@ $paivia=$lopetuspv - $aloituspv;
 $paivia= $paivia/86400;
 
 
-
+if ($paivia<=31){
 #make boxes for each day
 print '<FORM action="/cgi-bin/kalenteriin.cgi" method="POST">';
 $countd=1;
 print "Anna aloitus- ja lopetusaika (xx:xx muodossa) sekä kuvaus";
+
+
 for ( $a=0; $a<= $paivia; $a++ ){
 print "<br>";
 
@@ -72,7 +74,10 @@ print "<input type=\"hidden\" name=\"paivia\" value=\"$paivia\" maxlength=\"2\">
 print "Kopioi seuraava sivu, tallenna se \".csv\" päätteen kanssa ja anna googlen kalenterin tehdä \"taikojaan\" \"Tuo kalenteri\" toiminnon kautta";
 print '<input type="submit" value="Submit">';
 print "</FORM>";
-
+}
+else {
+print "Liikaa päiviä!";
+}
 
 print "</body>";
 print "</html>";
