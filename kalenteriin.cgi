@@ -26,11 +26,23 @@ $d2="end$countd";
 $d3="desc$countd";
 $d4="date$countd";
 
+$startdd=$cgi->param($d1);
+$enddd=$cgi->param($d2);
+
+
+if ($startdd eq $enddd ) {
+#print nothing
+
+}
+else
+{
+
 print "\"" , $cgi->param($d3), "\"", "," ,$cgi->param($d4), "," ,$cgi->param($d4), "," , "FALSE" , "," ,$cgi->param($d1), "," ,$cgi->param($d2), "," , "," ,"työ" , "," , "TRUE" , "," , "FALSE";
-$countd++;
+
 print "<br>";
 }
-
+$countd++;
+}
 
 print "</body>";
 print "</html>";

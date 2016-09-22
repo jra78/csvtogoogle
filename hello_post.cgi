@@ -47,7 +47,7 @@ if ($paivia<=31){
 #make boxes for each day
 print '<FORM action="/cgi-bin/kalenteriin.cgi" method="POST">';
 $countd=1;
-print "Anna aloitus- ja lopetusaika (xx:xx muodossa) sekä kuvaus";
+print "Anna aloitus- ja lopetusaika (xx:xx muodossa) sekä kuvaus. Jätä vapaapäivien kohdalle molempiin sama aika.";
 
 
 for ( $a=0; $a<= $paivia; $a++ ){
@@ -62,8 +62,8 @@ $d3=$tm->year+1900;
 print "<input type=\"hidden\" name=\"date$countd\" value=\"$d1\/$d2\/$d3\"> " ;
 
 
-print "<input type=\"text\" name=\"start$countd\" value=\"$countd\" maxlength=\"5\" pattern=\"[0-9:]{5}\"> " ;
-print "<input type=\"text\" name=\"end$countd\" maxlength=\"5\" pattern=\"[0-9:]{5}\"> " ;
+print "<input type=\"text\" name=\"start$countd\" value=\"00:00\" maxlength=\"5\" pattern=\"[0-9:]{5}\"> " ;
+print "<input type=\"text\" name=\"end$countd\" value=\"00:00\" maxlength=\"5\" pattern=\"[0-9:]{5}\"> " ;
 print "<input type=\"text\" name=\"desc$countd\"maxlength=\"30\" pattern=\"[A-Za-z0-9^;]{0-30}\">  <br>" ;
 
 $countd++;
