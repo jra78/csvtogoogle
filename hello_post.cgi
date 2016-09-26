@@ -64,15 +64,16 @@ print "<input type=\"hidden\" name=\"date$countd\" value=\"$d1\/$d2\/$d3\"> " ;
 
 print "<input type=\"text\" name=\"start$countd\" value=\"00:00\" maxlength=\"5\" pattern=\"[0-9:]{5}\"> " ;
 print "<input type=\"text\" name=\"end$countd\" value=\"00:00\" maxlength=\"5\" pattern=\"[0-9:]{5}\"> " ;
-print "<input type=\"text\" name=\"desc$countd\"maxlength=\"30\" pattern=\"[A-Za-z0-9^;]{0-30}\">  <br>" ;
+print "<input type=\"text\" name=\"desc$countd\" maxlength=\"30\" pattern=\"[A-Za-z0-9^;]{0-30}\">  <br>" ;
 
 $countd++;
 $aloituspv=$aloituspv+86400;
 }
 #$paivia++;
 print "<input type=\"hidden\" name=\"paivia\" value=\"$paivia\" maxlength=\"2\">  <br>" ;
-print "Kopioi seuraava sivu, tallenna se \".csv\" päätteen kanssa ja anna googlen kalenterin tehdä \"taikojaan\" \"Tuo kalenteri\" toiminnon kautta";
-print '<input type="submit" value="Submit">';
+print "Tallenna \".csv\" tiedosto ja anna googlen kalenterin tehdä \"taikojaan\" \"Tuo kalenteri\" toiminnon kautta";
+print "<br>";
+print '<input type="submit" value="Jatka">';
 print "</FORM>";
 }
 else {
