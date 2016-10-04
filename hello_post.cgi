@@ -5,7 +5,7 @@ use CGI;
 print "Content-type:text/html\r\n\r\n";
 print "<html>";
 print "<head>";
-print "<title>Maraplan to google calendar</title>";
+print "<title>CVS to google calendar</title>";
 print "</head>";
 print "<body>";
 print '<meta charset="UTF-8">'; 
